@@ -1,7 +1,8 @@
 @use '../../../styles.scss';
 
 .weather-widget {
-    background-color: styles.$color-orange-50;
+    // background-color: styles.$color-orange-50;
+    background-color: white;
     border-radius: 15px;
     box-shadow: styles.$shadow-primary;
     color: styles.$color-dark-gray;
