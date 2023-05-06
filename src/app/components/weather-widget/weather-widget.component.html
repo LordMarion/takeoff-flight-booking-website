@@ -1,0 +1,10 @@
+<div  *ngIf="currentWeather$ | async as currentWeather" class="weather-widget">
+  <div class="weather-widget__date">{{ currentDate | date: 'EEEE, MMMM d, h:mm a'}}</div>
+  <div class="weather-widget__city">{{ currentWeather.name }}, {{ currentWeather.sys.country }}</div>
+  <div class="weather-widget__weather">
+    <div class="weather-widget__weather--temp">{{ currentWeather.main.temp | number: '1.0-0' }} &#8451;</div>
+    <div class="weather-widget__weather--icon">
+      <img src='{{ "https://openweathermap.org/img/wn/" + currentWeather.weather[0].icon + "@2x.png"}}' alt=""/>
+    </div>
+  </div>
+</div>

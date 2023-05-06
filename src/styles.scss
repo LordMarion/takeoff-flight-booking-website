@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+//Font families
+$font-family-primary: 'Open Sans', sans-serif;
+$font-family-logo: 'Nunito', sans-serif;
+
+//Font weights
+$font-regular: 400;
+$font-semibold: 600;
+$font-bold: 700;
+
+//Colors
+$color-dark-gray: #404040;
+$color-light-gray: #959595;
+
+$color-orange-50: #fef4ee;
+$color-orange-100: #fce7d8;
+$color-orange-200: #f8cbb0;
+$color-orange-300: #f4a77d;
+$color-orange-400: #ee7849;
+$color-orange-500: #e95220;
+$color-orange-600: #db3e1b;
+$color-orange-700: #b62d18;
+$color-orange-800: #91261b;
+$color-orange-900: #752219;
+$color-orange-950: #3f0e0b;
+
+
+//Gradients
+$gradient-button-orange: linear-gradient(0deg, rgba(218,91,72,1) 0%, rgba(244,167,125,1) 100%);
+
+//Shadows
+$shadow-primary: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

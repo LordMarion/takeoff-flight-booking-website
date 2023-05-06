@@ -1,0 +1,15 @@
+.bcg-video {
+    height: 100vh;
+    left: 0;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 16px;
+}

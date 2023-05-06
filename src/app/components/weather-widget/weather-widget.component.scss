@@ -1,0 +1,28 @@
+@use '../../../styles.scss';
+
+.weather-widget {
+    background-color: styles.$color-orange-50;
+    border-radius: 15px;
+    box-shadow: styles.$shadow-primary;
+    color: styles.$color-dark-gray;
+    font-family: styles.$font-family-primary;
+    padding: 1.2rem 2rem 1rem 2rem;
+    width: fit-content;
+
+    .weather-widget__date,
+    .weather-widget__city {
+        font-size: .8em;
+        margin-bottom: .3em;
+    }
+
+    .weather-widget__weather {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        min-width: 13em;
+
+        .weather-widget__weather--temp {
+            font-size: 2.5em;
+        }
+    }
+}
