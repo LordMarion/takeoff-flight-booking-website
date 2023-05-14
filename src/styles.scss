@@ -1,6 +1,6 @@
 //Font families
-$font-family-primary: 'Open Sans', sans-serif;
-$font-family-logo: 'Nunito', sans-serif;
+$font-family-primary: "Open Sans", sans-serif;
+$font-family-logo: "Nunito", sans-serif;
 
 //Font weights
 $font-regular: 400;
@@ -23,15 +23,77 @@ $color-orange-800: #91261b;
 $color-orange-900: #752219;
 $color-orange-950: #3f0e0b;
 
-
 //Gradients
-$gradient-button-orange: linear-gradient(0deg, rgba(218,91,72,1) 0%, rgba(244,167,125,1) 100%);
+// $gradient-button-orange: linear-gradient(to top, #da5b48 0%, #f4a77d 95%);
+$gradient-button-orange: linear-gradient(to top, #da5b48 0%, transparent 95%), #f4a77d;
+@mixin gradient-hover-effect($color) {
+    transition: background-color 1s;
+    background-color: $color;
+}
 
 //Shadows
 $shadow-primary: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
-*, *::after, *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+//Buttons
+@mixin button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: $font-family-primary;
+  font-size: 1.5em;
+  padding: 0.5em 2em;
+}
+
+@mixin primary-button {
+  @include button;
+  background: $gradient-button-orange;
+  color: white;
+}
+
+@mixin secondary-button {
+  @include button;
+  background-color: white;
+  color: $color-dark-gray;
+}
+
+//Other
+@mixin hyperlink-reset {
+  color: $color-dark-gray;
+  text-decoration: none;
+}
+
+@mixin gradient-text {
+  background: #da5b48;
+  background: $gradient-button-orange;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+//Breakpoints
+@mixin breakpoint($point) {
+  @if $point == "small" {
+    @media (max-width: 449px) {
+      @content;
+    }
+  } @else if $point == "medium" {
+    @media (min-width: 481px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == "large" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-primary;
 }
