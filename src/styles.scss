@@ -48,6 +48,11 @@ $shadow-primary: 0px 8px 15px rgba(0, 0, 0, 0.1);
   @include button;
   background: $gradient-button-orange;
   color: white;
+  
+  &:hover,
+  &:focus {
+      @include gradient-hover-effect (#da5b48);
+  }
 }
 
 @mixin secondary-button {

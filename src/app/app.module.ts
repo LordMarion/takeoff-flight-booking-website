@@ -8,12 +8,16 @@ import { WeatherWidgetComponent } from './components/weather-widget/weather-widg
 
 import { WeatherService } from './services/weather.service';
 import { HeaderComponent } from './components/header/header.component';
+import { MainPageFormComponent } from './components/main-page-form/main-page-form.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherWidgetComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainPageFormComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

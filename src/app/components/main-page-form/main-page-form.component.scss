@@ -1,0 +1,47 @@
+@use 'src/styles.scss';
+
+.form {
+    justify-content: stretch;
+    display: grid;
+    gap: .5em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-flow: dense;
+
+    .label {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: styles.$shadow-primary;
+        color: styles.$color-light-gray;
+        display: flex;
+        flex-direction: column;
+        font-family: styles.$font-family-primary;
+        gap: .1em;
+        justify-content: center;
+        padding: 1em .5em;
+        width: 100%;
+    
+        .label-name {
+            font-size: .8em;
+            font-weight: styles.$font-semibold;
+            margin-left: .3em;
+            text-transform: uppercase;
+        }
+    
+        .select,
+        .input {
+            background: white;
+            -webkit-appearance: none;
+            border: none;
+            color: styles.$color-dark-gray;
+            cursor: pointer;
+            font-family: styles.$font-family-primary;
+            font-size: 1.5em;
+            outline-color: styles.$color-light-gray;
+        }
+    }
+    
+    .button {
+        @include styles.primary-button;
+    }
+}
+

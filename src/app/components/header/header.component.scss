@@ -26,10 +26,6 @@
 
     .login-btn {
         @include styles.primary-button;
-        &:hover,
-        &:focus {
-            @include styles.gradient-hover-effect (#da5b48);
-        }
     }
 
     //Media queries
