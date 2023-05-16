@@ -1,0 +1,52 @@
+@use "src/styles.scss";
+
+// .headline-wrapper {
+//     // max-width: 75%;
+
+//     //Media queries
+//     @include styles.breakpoint("medium") {
+//         .headline-wrapper {
+//             max-width: 100%;
+//         }
+//         .headline {
+//             text-align: justify;
+//         }
+//     }
+
+//     @include styles.breakpoint("small") {
+//         .headline-wrapper {
+//             max-width: 100%;
+//             text-align: center;
+//         }
+//     }
+
+//     .headline {
+//         color: white;
+//         font-size: clamp(1rem, 10vw + 1rem, 5rem);
+//     }
+// }
+
+.main-page {
+  .headline {
+    color: white;
+    font-size: clamp(1rem, 10vw + 1rem, 5rem);
+    margin-top: 15vh;
+  }
+
+  .app-weather-widget {
+    display: block;
+    margin-top: 15vh;
+  }
+
+  .app-main-page-form {
+    display: block;
+    margin-top: 1vh;
+  }
+}
+
+//Media queries
+@include styles.breakpoint("small") {
+  .headline {
+    text-align: center;
+  }
+}

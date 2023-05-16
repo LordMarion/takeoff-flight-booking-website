@@ -77,7 +77,7 @@ $shadow-primary: 0px 8px 15px rgba(0, 0, 0, 0.1);
 //Breakpoints
 @mixin breakpoint($point) {
   @if $point == "small" {
-    @media (max-width: 449px) {
+    @media (max-width: 440px) {
       @content;
     }
   } @else if $point == "medium" {
