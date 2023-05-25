@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WeatherWidgetComponent } from './components/weather-widget/weather-widget.component';
 import { WeatherService } from './services/weather.service';
+import { UserService } from './services/user.service';
 import { HeaderComponent } from './components/header/header.component';
 import { MainPageFormComponent } from './components/main-page-form/main-page-form.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +21,17 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     WeatherWidgetComponent,
     HeaderComponent,
     MainPageFormComponent,
-    MainPageComponent
+    MainPageComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
-  providers: [WeatherService],
+  providers: [WeatherService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

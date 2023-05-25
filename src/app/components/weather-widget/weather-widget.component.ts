@@ -10,7 +10,7 @@ import { WeatherData } from 'src/app/models/weather.model';
 })
 
 export class WeatherWidgetComponent implements OnInit {
-  currentWeather$: Observable<WeatherData>
+  currentWeather$: Observable<WeatherData>;
   currentDate: Date = new Date();
 
   constructor(private weatherService: WeatherService) {}
@@ -19,7 +19,7 @@ export class WeatherWidgetComponent implements OnInit {
     this.currentWeather$ = this.weatherService.getWeather('Katowice');
   }
 
-  getWeatherData() {
-    this.currentWeather$ = this.weatherService.getWeather('Katowice');
-  }
+  // getWeatherData() {
+  //   this.currentWeather$ = this.weatherService.getWeather('Katowice');
+  // }
 }

@@ -61,6 +61,22 @@ $shadow-primary: 0px 8px 15px rgba(0, 0, 0, 0.1);
   color: $color-dark-gray;
 }
 
+@mixin close-button {
+  background-color: transparent;
+  border: none;
+  color: $color-dark-gray;
+  cursor: pointer;
+  font-family: $font-family-logo;
+  font-size: 3em;
+  height: 1em;
+  line-height: .5em;
+  width: 1em;
+
+  &:hover {
+    color: $color-light-gray;
+  }
+}
+
 //Other
 @mixin hyperlink-reset {
   color: $color-dark-gray;

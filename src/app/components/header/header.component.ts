@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  constructor(private modalService: NgbModal) {}
 
+  openLoginModal() {
+    const modalRef = this.modalService.open(LoginComponent);
+  }
 }
