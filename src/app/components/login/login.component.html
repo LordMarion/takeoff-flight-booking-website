@@ -1,21 +1,44 @@
 <div class="login">
-    <div class="login__content">
-        <div class="close-button-container">
-            <button type="button" class="close-button" (click)="activeModal.close('Close click')">×</button>
-        </div>
-        <h2>Login</h2>
-        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" *ngIf="users$ | async as users">
-          <label for="userSelect">Choose a user:</label>
-          <select id="userSelect" name="users" [(ngModel)]="selectedUser">
-            <option [ngValue]="user" *ngFor="let user of users">
-              {{ user.username }}
-            </option>
-          </select>
-          <div>
-            <label for="passwordInput">Password:</label>
-            <input type="password" id="passwordInput" name="password" [(ngModel)]="password"/>
-          </div>
-          <button>Login</button>
-        </form>
+  <div class="login__content">
+    <div class="close-button-container">
+      <button
+        type="button"
+        class="close-button"
+        (click)="activeModal.close('Close click')"
+      >
+        ×
+      </button>
     </div>
+    <h2>Login</h2>
+    <form
+      #loginForm="ngForm"
+      (ngSubmit)="login(loginForm)"
+      *ngIf="users$ | async as users"
+    >
+      <label class="label" for="userSelect">
+        <span class="label-name">Choose a user</span>
+        <select
+          class="select"
+          id="userSelect"
+          name="users"
+          [(ngModel)]="selectedUser"
+        >
+          <option [ngValue]="user" *ngFor="let user of users">
+            {{ user.username }}
+          </option>
+        </select>
+      </label>
+      <label class="label" for="passwordInput">
+        <span class="label-name">Password</span>
+        <input
+          class="input"
+          type="password"
+          id="passwordInput"
+          name="password"
+          [(ngModel)]="password"
+        />
+      </label>
+      <button class="login-btn">Login</button>
+    </form>
+  </div>
 </div>

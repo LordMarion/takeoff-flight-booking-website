@@ -24,8 +24,8 @@ $color-orange-900: #752219;
 $color-orange-950: #3f0e0b;
 
 //Gradients
-// $gradient-button-orange: linear-gradient(to top, #da5b48 0%, #f4a77d 95%);
 $gradient-button-orange: linear-gradient(to top, #da5b48 0%, transparent 95%), #f4a77d;
+
 @mixin gradient-hover-effect($color) {
     transition: background-color 1s;
     background-color: $color;
@@ -75,6 +75,19 @@ $shadow-primary: 0px 8px 15px rgba(0, 0, 0, 0.1);
   &:hover {
     color: $color-light-gray;
   }
+}
+
+//Inputs
+
+@mixin input-primary {
+  background: white;
+  -webkit-appearance: none;
+  border: none;
+  color: $color-dark-gray;
+  cursor: pointer;
+  font-family: $font-family-primary;
+  font-size: 1.5em;
+  outline-color: $color-light-gray;
 }
 
 //Other
