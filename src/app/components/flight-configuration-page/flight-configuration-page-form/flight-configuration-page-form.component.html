@@ -1,0 +1,34 @@
+<form class="form">
+    <label class="label" for="from">
+        <span class="label-name">From</span>
+        <select class="select" name="from" id="from" ngModel required>
+          <option value="Katowice">Katowice</option>
+        </select>
+    </label>
+    <label class="label" for="to">
+        <span class="label-name">To</span>
+        <select class="select" name="to" id="to" ngModel required>
+          <option value="Warszawa">Warsaw</option>
+          <option value="Paris">Paris</option>
+          <option value="New York">New York</option>
+        </select>
+    </label>
+    <label class="label" for="date">
+        <span class="label-name" name="date" id="date">Date</span>
+        <input class="input" type="date" ngModel required>
+    </label>
+    <label class="label" for="passengers">
+        <span class="label-name" name="passengers" id="passengers">Passengers</span>
+        <input class="input" type="number" min="1" max="9" ngModel required>
+    </label>
+    <label class="label" for="baggage">
+        <span class="label-name">Baggage</span>
+        <select class="select" name="baggage" id="baggage" ngModel required>
+          <option value="carry-on">Carry-on</option>
+          <option value="trolley">Trolley</option>
+          <option value="checked-in">Checked-in</option>
+        </select>
+    </label>
+    <p class="price-text">Price:</p>
+    <button class="button" type="submit">Order</button>
+</form>

@@ -1,13 +1,13 @@
-<form class="form" #mainPageForm="ngForm">
+<form class="form" #mainPageForm="ngForm" (ngSubmit)="onSubmit(mainPageForm.value)">
   <label class="label" for="from">
     <span class="label-name">From</span>
-    <select class="select" name="from" id="from">
+    <select class="select" name="from" id="from" ngModel required>
       <option value="Katowice">Katowice</option>
     </select>
   </label>
   <label class="label" for="to">
     <span class="label-name">To</span>
-    <select class="select" name="to" id="to">
+    <select class="select" name="to" id="to" ngModel required>
       <option value="Warszawa">Warsaw</option>
       <option value="Paris">Paris</option>
       <option value="New York">New York</option>
@@ -15,11 +15,11 @@
   </label>
   <label class="label" for="date">
     <span class="label-name" name="date" id="date">Date</span>
-    <input class="input" type="date">
+    <input class="input" type="date" ngModel required>
   </label>
   <label class="label" for="passengers">
     <span class="label-name" name="passengers" id="passengers">Passengers</span>
-    <input class="input" type="number" min="1" max="9">
+    <input class="input" type="number" min="1" max="9" ngModel required>
   </label>
-  <button class="button">Accept</button>
+  <button class="button" type="submit">Accept</button>
 </form>

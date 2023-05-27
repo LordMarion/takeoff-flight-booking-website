@@ -1,0 +1,42 @@
+@use 'src/styles.scss';
+
+.form {
+    .label,
+    .price-text {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: styles.$shadow-primary;
+        color: styles.$color-light-gray;
+        display: flex;
+        flex-direction: column;
+        font-family: styles.$font-family-primary;
+        gap: .1em;
+        justify-content: center;
+        margin-bottom: 1em;
+        padding: 1em .5em;
+        width: 100%;
+    
+        .label-name {
+            font-size: .8em;
+            font-weight: styles.$font-semibold;
+            text-transform: uppercase;
+        }
+    
+        .select,
+        .input {
+            background: white;
+            -webkit-appearance: none;
+            border: none;
+            color: styles.$color-dark-gray;
+            cursor: pointer;
+            font-family: styles.$font-family-primary;
+            font-size: 1.5em;
+            outline-color: styles.$color-light-gray;
+        }
+    }
+    
+    .button {
+        @include styles.primary-button;
+        width: 100%;
+    }
+}

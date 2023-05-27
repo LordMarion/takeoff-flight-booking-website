@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 import { SharedService } from 'src/app/services/shared.service';
 import { LoginComponent } from '../login/login.component';
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit {
   isLoggedIn = false;
   loggedUser = '';
 
-  constructor(private sharedService: SharedService, private modalService: NgbModal) {}
+  constructor(private sharedService: SharedService, private modalService: NgbModal, private router: Router) {}
 
   ngOnInit(): void {
     this.sharedService.isLoggedIn$.subscribe(isLoggedIn => {
@@ -32,5 +33,6 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.isLoggedIn = false;
     this.loggedUser = '';
+    this.router.navigate(['/']);
   }
 }
