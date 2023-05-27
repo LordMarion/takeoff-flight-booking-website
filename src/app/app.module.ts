@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { WeatherService } from './services/weather.service';
@@ -35,10 +34,10 @@ import { SeatingPlanComponent } from './components/flight-configuration-page/sea
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     FormsModule,
-    NgbModule
+    HttpClientModule,
+    NgbModule,
+    AppRoutingModule,
   ],
   providers: [WeatherService, UserService, SharedService, FormDataService],
   bootstrap: [AppComponent]

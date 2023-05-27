@@ -1,25 +1,25 @@
 <form class="form">
     <label class="label" for="from">
         <span class="label-name">From</span>
-        <select class="select" name="from" id="from" ngModel required>
+        <select class="select" name="from" id="from" [(ngModel)]="formData.from" required>
           <option value="Katowice">Katowice</option>
         </select>
     </label>
     <label class="label" for="to">
         <span class="label-name">To</span>
-        <select class="select" name="to" id="to" ngModel required>
+        <select class="select" name="to" id="to" [(ngModel)]="formData.to" required>
           <option value="Warszawa">Warsaw</option>
           <option value="Paris">Paris</option>
           <option value="New York">New York</option>
         </select>
     </label>
     <label class="label" for="date">
-        <span class="label-name" name="date" id="date">Date</span>
-        <input class="input" type="date" ngModel required>
+        <span class="label-name">Date</span>
+        <input class="input" type="date" name="date" id="date" [(ngModel)]="formData.date" required>
     </label>
     <label class="label" for="passengers">
-        <span class="label-name" name="passengers" id="passengers">Passengers</span>
-        <input class="input" type="number" min="1" max="9" ngModel required>
+        <span class="label-name" >Passengers</span>
+        <input class="input" type="number" name="passengers" id="passengers" min="1" max="9" ngModel required>
     </label>
     <label class="label" for="baggage">
         <span class="label-name">Baggage</span>
