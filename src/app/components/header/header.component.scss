@@ -28,6 +28,10 @@
         @include styles.primary-button;
     }
 
+    .log-out-btn {
+        @include styles.secondary-button;
+    }
+
     //Media queries
     @include styles.breakpoint("small") {
         .login-btn {
