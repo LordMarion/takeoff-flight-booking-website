@@ -3,6 +3,9 @@
         <img class="logo__img" src="/assets/images/takeoff-logo.png" alt="" />
         <span class="logo__text">Takeoff</span>
       </a>
-      <button class="login-btn" *ngIf="!isLoggedIn" (click)="openLoginModal()">Login</button>
-      <button class="log-out-btn" *ngIf="isLoggedIn">Log Out</button>
+      <div class="login-container">
+        <p class="logged-user-text" *ngIf="isLoggedIn">{{ loggedUser }}</p>
+        <button class="login-btn" *ngIf="!isLoggedIn" (click)="openLoginModal()">Login</button>
+        <button class="log-out-btn" *ngIf="isLoggedIn" (click)="logout()">Log Out</button>
+      </div>
 </header>

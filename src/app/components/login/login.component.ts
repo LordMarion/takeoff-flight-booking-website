@@ -17,7 +17,8 @@ export class LoginComponent {
   selectedUser: any;
   password: string;
 
-  loggedUserName: string;
+  loggedUser: string;
+  errorMessage = '';
   
   constructor(private userService: UserService, private sharedService: SharedService, private modal: NgbModal, public activeModal: NgbActiveModal) {}
   
@@ -26,16 +27,15 @@ export class LoginComponent {
   };
 
   login(form: NgForm) {
-    console.log(form);
     if (this.selectedUser && this.selectedUser.password === this.password) {
-      console.log('Logged in as:', this.selectedUser.username);
+      this.loggedUser = this.selectedUser.username;
+
       this.sharedService.setLoggedIn(true);
-      this.loggedUserName = this.selectedUser.username;
+      this.sharedService.setLoggedUser(this.loggedUser);
+
       this.activeModal.close('Close click');
-      // Perform any necessary actions after login
     } else {
-      console.log('Invalid password');
-      // Handle invalid login
+      this.errorMessage = 'Invalid password or unselected user';
     }
   }
 }

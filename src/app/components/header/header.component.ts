@@ -11,16 +11,26 @@ import { LoginComponent } from '../login/login.component';
 })
 export class HeaderComponent implements OnInit {
   isLoggedIn = false;
-  
+  loggedUser = '';
+
   constructor(private sharedService: SharedService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
-    this.sharedService.isLoggedIn$.subscribe((isLoggedIn) => {
+    this.sharedService.isLoggedIn$.subscribe(isLoggedIn => {
       this.isLoggedIn = isLoggedIn;
     });
+
+    this.sharedService.loggedUser$.subscribe(loggedUser => {
+      this.loggedUser = loggedUser;
+    })
   }
 
   openLoginModal() {
     const modalRef = this.modalService.open(LoginComponent);
+  }
+
+  logout() {
+    this.isLoggedIn = false;
+    this.loggedUser = '';
   }
 }

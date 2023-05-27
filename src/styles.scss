@@ -90,6 +90,15 @@ $shadow-primary: 0px 8px 15px rgba(0, 0, 0, 0.1);
   outline-color: $color-light-gray;
 }
 
+//Error messages
+
+@mixin error-message {
+  color: #D8000C;
+  background-color: #FFBABA;
+  border-radius: 10px;
+  padding: .5em;
+}
+
 //Other
 @mixin hyperlink-reset {
   color: $color-dark-gray;

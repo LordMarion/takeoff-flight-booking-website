@@ -22,6 +22,7 @@
           id="userSelect"
           name="users"
           [(ngModel)]="selectedUser"
+          required
         >
           <option [ngValue]="user" *ngFor="let user of users">
             {{ user.username }}
@@ -36,8 +37,12 @@
           id="passwordInput"
           name="password"
           [(ngModel)]="password"
+          required
         />
       </label>
+      <ng-container *ngIf="errorMessage">
+        <div class="error-message">{{ errorMessage }}</div>
+      </ng-container>
       <button class="login-btn">Login</button>
     </form>
   </div>

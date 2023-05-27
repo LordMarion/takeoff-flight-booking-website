@@ -62,6 +62,11 @@
             }
         }
 
+        .error-message {
+            @include styles.error-message;
+            margin-bottom: 1em;
+        }
+
         .login-btn {
             @include styles.primary-button;
             width: 100%;

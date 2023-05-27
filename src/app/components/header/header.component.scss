@@ -24,23 +24,36 @@
         }
     }
 
-    .login-btn {
-        @include styles.primary-button;
-    }
+    .login-container {
+        align-items: center;
+        display: flex;
+        gap: 1em;
+        justify-content: space-between;
 
-    .log-out-btn {
-        @include styles.secondary-button;
-    }
-
-    //Media queries
-    @include styles.breakpoint("small") {
-        .login-btn {
+        .logged-user-text {
+            color: styles.$color-orange-500;
             font-size: 1.5em;
-            padding: 0.5em 1.5em;
+            font-weight: styles.$font-semibold;
         }
 
-        .logo__text {
-            display: none;
+        .login-btn {
+            @include styles.primary-button;
         }
+    
+        .log-out-btn {
+            @include styles.secondary-button;
+        }
+    }
+}
+
+//Media queries
+@include styles.breakpoint("small") { 
+    .login-btn {
+        font-size: 1.5em;
+        padding: 0.5em 1.5em;
+    }
+
+    .logo__text {
+        display: none;
     }
 }
