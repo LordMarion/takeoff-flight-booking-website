@@ -21,7 +21,7 @@
   </label>
   <label class="label" for="date">
     <span class="label-name">Date</span>
-    <input class="input" type="date" name="date" id="date" ngModel [min]="minDate" required>
+    <input class="input" type="text" name="date" id="date" placeholder="dd-mm-yyyy" onfocus="(this.type='date')" ngModel [min]="minDate" required>
     <div *ngIf="mainPageForm.controls.date?.invalid && mainPageForm.controls.date?.touched" class="error-message">
       Date is required.
     </div>

@@ -37,6 +37,10 @@
             font-size: 1.5em;
             outline-color: styles.$color-light-gray;
         }
+
+        .error-message {
+            @include styles.error-message;
+        }
     }
     
     .button {

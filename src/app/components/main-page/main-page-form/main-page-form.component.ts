@@ -6,7 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap'; //added
 
 import { FormDataService } from 'src/app/services/form-data.service';
 import { SharedService } from 'src/app/services/shared.service';
-import { LoginComponent } from '../../login/login.component'; //added
+import { LoginComponent } from '../../login/login.component';
 
 @Component({
   selector: 'app-main-page-form',
@@ -22,7 +22,6 @@ export class MainPageFormComponent implements OnInit {
 
   };
   minDate: string;
-  // isLoggedIn = this.sharedService.isLoggedIn$.value;
   isLoggedIn = false;
 
   constructor(private formDataService: FormDataService, private sharedService: SharedService, private modalService: NgbModal, private router: Router) {
