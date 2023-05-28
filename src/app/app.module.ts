@@ -19,6 +19,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FlightConfigurationPageComponent } from './components/flight-configuration-page/flight-configuration-page.component';
 import { FlightConfigurationPageFormComponent } from './components/flight-configuration-page/flight-configuration-page-form/flight-configuration-page-form.component';
 import { SeatingPlanComponent } from './components/flight-configuration-page/seating-plan/seating-plan.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SeatingPlanComponent } from './components/flight-configuration-page/sea
     LoginComponent,
     FlightConfigurationPageComponent,
     FlightConfigurationPageFormComponent,
-    SeatingPlanComponent
+    SeatingPlanComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

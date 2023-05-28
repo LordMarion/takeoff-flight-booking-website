@@ -1,0 +1,23 @@
+@use "src/styles.scss";
+
+.center {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    text-align: center;
+
+    .heading {
+        color: styles.$color-orange-500;
+        font-size: 3em;
+        margin-bottom: .5em;
+    }
+
+    .link {
+        @include styles.hyperlink-reset;
+        @include styles.secondary-button;
+    }
+}
