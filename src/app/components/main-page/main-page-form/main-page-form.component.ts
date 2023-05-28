@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 import { FormDataService } from 'src/app/services/form-data.service';
 
@@ -10,7 +11,11 @@ import { FormDataService } from 'src/app/services/form-data.service';
 })
 export class MainPageFormComponent {
   formData: any = {
-    date: ''
+    from: '',
+    to: '',
+    date: '',
+    passengers: ''
+
   };
   minDate: string;
 
@@ -20,8 +25,12 @@ export class MainPageFormComponent {
     this.minDate = currentDate.toISOString().split('T')[0];
   }
 
-  onSubmit(form: any) {
-    this.formDataService.formData = { ...form };
+  onSubmit(form: NgForm) {
+    if (form.invalid) {
+      console.log('invalid');
+      return;
+    }
+    this.formDataService.formData = { ...form.value };
 
     this.router.navigate(['/flight-configuration']);
   }
