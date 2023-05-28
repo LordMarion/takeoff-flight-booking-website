@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppRoutingModule } from './app-routing.module';
 
 import { WeatherService } from './services/weather.service';
 import { UserService } from './services/user.service';
 import { SharedService } from './services/shared.service';
 import { FormDataService } from './services/form-data.service';
+
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { WeatherWidgetComponent } from './components/weather-widget/weather-widget.component';
