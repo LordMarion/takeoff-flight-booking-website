@@ -1,36 +1,7 @@
-<!-- <form class="form" name="form" #mainPageForm="ngForm" (ngSubmit)="mainPageForm.form.valid && onSubmit(mainPageForm.value)">
-  <label class="label" for="from">
-    <span class="label-name">From</span>
-    <select class="select" name="from" id="from" ngModel required>
-      <option value="Katowice">Katowice</option>
-    </select>
-  </label>
-  <label class="label" for="to">
-    <span class="label-name">To</span>
-    <select class="select" name="to" id="to" ngModel required>
-      <option value="Warszawa">Warsaw</option>
-      <option value="Paris">Paris</option>
-      <option value="New York">New York</option>
-    </select>
-  </label>
-  <label class="label" for="date">
-    <span class="label-name">Date</span>
-    <input class="input" type="date" name="date" id="date" [min]="minDate" ngModel required>
-  </label>
-  <label class="label" for="passengers">
-    <span class="label-name">Passengers</span>
-    <input class="input" type="number" name="passengers" id="passengers" min="1" max="9" ngModel required>
-  </label>
-    <div *ngIf="mainPageForm.controls.passegers?.invalid && mainPageForm.controls.passegers?.touched">
-      <div *ngIf="mainPageForm.controls.passegers?.errors?.required">This field is required.</div>
-    </div>
-  <button class="button" type="submit">Accept</button>
-</form> -->
-
 <form class="form" #mainPageForm="ngForm" (ngSubmit)="onSubmit(mainPageForm)">
   <label class="label" for="from">
     <span class="label-name">From</span>
-    <select class="select" name="from" id="from" [(ngModel)]="formData.from" required>
+    <select class="select" name="from" id="from" ngModel required>
       <option value="Katowice">Katowice</option>
     </select>
     <div *ngIf="mainPageForm.controls.from?.invalid && mainPageForm.controls.from?.touched" class="error-message">
@@ -39,7 +10,7 @@
   </label>
   <label class="label" for="to">
     <span class="label-name">To</span>
-    <select class="select" name="to" id="to" [(ngModel)]="formData.to" required>
+    <select class="select" name="to" id="to" ngModel required>
       <option value="Warszawa">Warsaw</option>
       <option value="Paris">Paris</option>
       <option value="New York">New York</option>
@@ -50,14 +21,14 @@
   </label>
   <label class="label" for="date">
     <span class="label-name">Date</span>
-    <input class="input" type="date" name="date" id="date" [(ngModel)]="formData.date" [min]="minDate" required>
+    <input class="input" type="date" name="date" id="date" ngModel [min]="minDate" required>
     <div *ngIf="mainPageForm.controls.date?.invalid && mainPageForm.controls.date?.touched" class="error-message">
       Date is required.
     </div>
   </label>
   <label class="label" for="passengers">
     <span class="label-name">Passengers</span>
-    <input class="input" type="number" name="passengers" id="passengers" min="1" max="9" [(ngModel)]="formData.passengers" required>
+    <input class="input" type="number" name="passengers" id="passengers" min="1" max="9" ngModel required>
     <div *ngIf="mainPageForm.controls.passengers?.invalid && mainPageForm.controls.passengers?.touched" class="error-message">
       Passengers is required and must be a number between 1 and 9.
     </div>
