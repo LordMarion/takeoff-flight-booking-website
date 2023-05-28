@@ -9,8 +9,16 @@ import { FormDataService } from 'src/app/services/form-data.service';
   styleUrls: ['./main-page-form.component.scss']
 })
 export class MainPageFormComponent {
+  formData: any = {
+    date: ''
+  };
+  minDate: string;
 
-  constructor(private formDataService: FormDataService, private router: Router) {}
+  constructor(private formDataService: FormDataService, private router: Router) {
+    //Preventing from selecting past date
+    const currentDate = new Date();
+    this.minDate = currentDate.toISOString().split('T')[0];
+  }
 
   onSubmit(form: any) {
     this.formDataService.formData = { ...form };

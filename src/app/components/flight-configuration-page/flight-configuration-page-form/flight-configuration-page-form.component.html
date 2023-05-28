@@ -15,11 +15,11 @@
     </label>
     <label class="label" for="date">
         <span class="label-name">Date</span>
-        <input class="input" type="date" name="date" id="date" [(ngModel)]="formData.date" required>
+        <input class="input" type="date" name="date" id="date" [min]="minDate" [(ngModel)]="formData.date" required>
     </label>
     <label class="label" for="passengers">
         <span class="label-name" >Passengers</span>
-        <input class="input" type="number" name="passengers" id="passengers" min="1" max="9" ngModel required>
+        <input class="input" type="number" name="passengers" id="passengers" min="1" max="9" [(ngModel)]="formData.passengers" required>
     </label>
     <label class="label" for="baggage">
         <span class="label-name">Baggage</span>
