@@ -1,1 +1,9 @@
 @use 'src/styles.scss';
+
+.seats {
+    cursor: pointer;
+}
+
+.seat-selected {
+    fill: styles.$color-orange-500;
+}
