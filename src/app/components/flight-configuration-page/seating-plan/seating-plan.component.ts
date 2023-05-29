@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SeatingPlanComponent {
   selectedSeats: string[] = [];
+  flightType: string = 'continental';
 
   isSelected(seatId: string): boolean {
     return this.selectedSeats.includes(seatId);
@@ -14,12 +15,10 @@ export class SeatingPlanComponent {
 
   handleSelection(seatId: string) {
     if (this.isSelected(seatId)) {
-      // Seat is already selected, remove it
       this.selectedSeats = this.selectedSeats.filter(id => id !== seatId);
     } else {
-      // Seat is not selected, add it
       this.selectedSeats.push(seatId);
     }
-    console.log(this.selectedSeats);
+    console.log(this.selectedSeats); //usunac to
   }
 }
