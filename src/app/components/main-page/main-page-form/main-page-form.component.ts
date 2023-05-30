@@ -58,6 +58,6 @@ export class MainPageFormComponent implements OnInit {
 
     this.formDataService.formData = { ...form.value };
     this.router.navigate(['/flight-configuration']);
-    } 
+    }
 }
 

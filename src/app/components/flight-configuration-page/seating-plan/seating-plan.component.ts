@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SeatingPlanComponent {
   selectedSeats: string[] = [];
-  flightType: string = 'continental';
+  flightType: string = 'intercontinental';
 
   isSelected(seatId: string): boolean {
     return this.selectedSeats.includes(seatId);
