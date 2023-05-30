@@ -9,7 +9,10 @@ import { FormDataService } from 'src/app/services/form-data.service';
 })
 export class FlightConfigurationPageFormComponent implements OnInit {
   formData: any = {
-    date: ''
+    from: '',
+    to: '',
+    date: '',
+    passengers: ''
   };
   minDate: string;
 

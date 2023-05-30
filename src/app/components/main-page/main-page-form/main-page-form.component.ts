@@ -19,7 +19,6 @@ export class MainPageFormComponent implements OnInit {
     to: '',
     date: '',
     passengers: ''
-
   };
   minDate: string;
   isLoggedIn = false;

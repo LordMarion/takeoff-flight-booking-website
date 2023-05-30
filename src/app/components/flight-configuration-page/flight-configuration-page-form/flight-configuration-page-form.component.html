@@ -19,7 +19,7 @@
     </label>
     <label class="label" for="passengers">
         <span class="label-name" >Passengers</span>
-        <input class="input" type="number" name="passengers" id="passengers" min="1" max="9" [(ngModel)]="formData.passengers" required>
+        <input class="input" type="number" name="passengers" id="passengers" [min]="1" [max]="9" [(ngModel)]="formData.passengers" required>
     </label>
     <label class="label" for="baggage">
         <span class="label-name">Baggage</span>
