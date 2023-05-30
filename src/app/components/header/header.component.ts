@@ -3,7 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 
 import { SharedService } from 'src/app/services/shared.service';
-import { LoginComponent } from '../login/login.component';
+import { LoginComponent } from 'src/app/components/login/login.component';
 
 @Component({
   selector: 'app-header',
