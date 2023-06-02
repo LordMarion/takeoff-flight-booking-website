@@ -15,3 +15,8 @@ Unfortunately, it is not yet fully completed, but I am working on it.
 ## Setup
 
 To run this project, install it locally using npm.
+
+## How to login to the website
+
+- Select user "test"
+- Enter password "test"
